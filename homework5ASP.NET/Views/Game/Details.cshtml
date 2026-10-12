@@ -1,0 +1,24 @@
+﻿@model Game
+
+@{
+    ViewData["Title"] = "Game Details";
+}
+
+<div class="container mt-4">
+    <h2>Game Information</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@Model.Title</h4>
+            <hr />
+            <p class="card-text"><strong>ID:</strong> @Model.Id</p>
+            <p class="card-text"><strong>Genre:</strong> @Model.Genre</p>
+            <p class="card-text"><strong>Rating:</strong> @Model.Rating</p>
+            <p class="card-text"><strong>Completion Status:</strong> @(Model.IsCompleted ? "Completed" : "Not Completed")</p>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
